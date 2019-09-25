@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<title>NBA Dashboard</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css"/>
+  <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+  <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-ajax/2.1.0/leaflet.ajax.min.js"></script>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script type="text/javascript" src="../static/js/app.js"></script>
+  <style>
+    #map{ width: 900px; height: 500px; }
+  </style>
+<style>
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: "Lato", sans-serif;
+    }
+
+    body,
+    html {
+        height: 100%;
+        color: rgb(39, 31, 31);
+        line-height: 1.8;
+    }
+
+    /* Create a Parallax Effect */
+
+    .bgimg-1,
+    .bgimg-2,
+    .bgimg-3 {
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    /* First image (Logo. Full height) */
+
+    .bgimg-1 {
+        background-image: url('https://www.wallpapersin4k.org/wp-content/uploads/2017/04/NBA-Desktop-Wallpaper-24.jpg');
+        min-height: 100%;
+    }
+
+    /* Second image (Analytics) */
+
+    .bgimg-2 {
+        background-image: url("https://download.hipwallpaper.com/desktop/1920/1080/68/30/Dnp6rS.jpg");
+        min-height: 40%;
+    }
+
+    /* Turn off parallax scrolling for tablets and phones */
+
+    @media only screen and (max-device-width: 1024px) {
+        .bgimg-1,
+        .bgimg-2,
+        .bgimg-3 {
+            background-attachment: scroll;
+        }
+    }
+</style>
+
+<body>
+
+
+    <!-- First Parallax Image with Logo Text -->
+    <div class="bgimg-1 w3-display-container " id="home">
+        <div class="w3-display-middle" style="white-space:nowrap;">
+            <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">2018-2019 NBA Season Statistics Dashboard
+                
+        </div>
+    </div>
+
+    <!-- Container (About Section) -->
+    
+    <div class="w3-content w3-container w3-padding-64" id="about">
+        <h3 class="w3-center">The League at a Glance</h3>
+        <p class="w3-center">
+            <em>The map displays each NBA team's basic info, including Location, Name, Conference, Division, and Aerna.<br> 
+                Interact with the map by zooming in and out as well as clicking each icon.
+        </em>
+          <div id="map"></div>
+
+
+<script type="text/javascript" src="../static/js/map.js"></script>
+       
+</p>
+
+        </div>
+        
+    </div>
+
+    <div class="w3-row w3-center w3-dark-grey w3-padding-16">
+        <div class="w3-quarter w3-section">
+            <span class="w3-xlarge">30</span>
+            <br> Teams
+        </div>
+        <div class="w3-quarter w3-section">
+            <span class="w3-xlarge">82</span>
+            <br> Games Per Season
+        </div>
+        <div class="w3-quarter w3-section">
+            <span class="w3-xlarge">15</span>
+            <br> Active Players on Each Roster
+        </div>
+        <div class="w3-quarter w3-section">
+            <span class="w3-xlarge">Toronto Raptors</span>
+            <br> Current Champion
+        </div>
+    </div>
+
+    <!-- Second Parallax Image with ANALYTICS Text -->
+    <div class="bgimg-2 w3-display-container">
+        <div class="w3-display-middle">
+            <span class="w3-xxlarge w3-text-white w3-wide">ANALYTICS</span>
+        </div>
+    </div>
+
+    <!-- Container (Analytics Section) -->
+    <div class="w3-content w3-container w3-padding-64" id="portfolio">
+        <h3 class="w3-center">INSERT SOMETHING FANCY HERE</h3>
+        <p class="w3-center">
+
+        <div id="myDiv"></div>
+        <script type="text/javascript" src="../static/js/TeamWinPieChart.js"></script>
+        <script type="text/javascript" src="../static/js/PlayerPpgScatter.js"></script>
+        <script type="text/javascript" src="../static/js/TeamStatsTable.js"></script>
+        <script type="text/javascript" src="../static/js/TeamTrueShooting.js"></script>
+
+            <em>Put all of our awesome plotly graphs here!!!!!
+                <br> INTERACTIVE!!!!!</em>
+                <em>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do 
+                        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut 
+                        enim ad minim veniam, quis nostrud exercitation ullamco laboris 
+                        nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in 
+                        reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla 
+                        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in 
+                        culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum 
+                        dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo 
+                        consequat.
+                </em>
+        </p>
+
+
+
+<body class='with-3d-shadow with-transitions'>
+
+
+        <br>
+
+    <!-- Footer -->
+    <footer class="w3-center w3-black w3-padding-64">
+        <a href="#home" class="w3-button w3-light-grey">
+            <i class="fa fa-arrow-up w3-margin-right"></i>Back to the top</a>
+        <div class="w3-xlarge w3-section boxhead">
+            <a href="https://www.linkedin.com/in/jacob-e-thomas-atx/" target="_blank">
+                <i class="fa fa-linkedin w3-hover-opacity"></i>
+            </a>
+        </div>
+        <p>Developed by Jacob Thomas, Marek Zapletal, & Josh Benenoch</p>
+        <p>TEXAS McCombs Data Science Program </p>
+        <p>2019</p>
+    </footer>  
+  
+
+</body>
+
+</html>
